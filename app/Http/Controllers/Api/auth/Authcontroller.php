@@ -13,6 +13,16 @@ use Illuminate\Support\Str;
 class Authcontroller extends Controller
 {
     
+     public function activeExam(){
+        $exam=resolve(ExamServices::class)->startExam();
+        $message=null;
+        if(!empty($exam)){
+            $message="register";
+        }
+        return response([
+            'message'=>$message
+        ]);
+    }
     public function register(Request $request){
         $data=$request->validate(
             [
