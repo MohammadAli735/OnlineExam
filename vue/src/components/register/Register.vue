@@ -2,10 +2,10 @@
     <div class="bg">
         <div class="container  pt-5 mt-5">
             <div class="card mb-3 shadow">
-                <div class="row  justify-content-center">
+                <div class="row  justify-content-center" v-if="(authStore.showForm!==null)">
                     <div class="col-lg-6">
                         <div class="card-body">
-                            <form @submit.prevent="submitLogin" id="registerForm">
+                            <form @submit.prevent="submitLogin" id="registerForm" >
                                 <label for="name">name</label>
                                 <input type="text" class="form-control mb-2" name="name" id="name"
                                     placeholder="enter your name">
@@ -54,6 +54,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="card" v-else>
+                    <div class="card-body">
+                        <h1>none of the exam in system is active.</h1>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -64,6 +69,7 @@ import { useAuthStore } from "../../stores/auth";
 import router from "../../router";
 import { ref } from "vue";
 const authStore = useAuthStore()
+authStore.is_active_exam()
 const submit=ref(false)
 const submitLogin =  () => {
     submit.value=true
