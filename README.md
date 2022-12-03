@@ -6,7 +6,7 @@
 -  Also i have emplement all feature of vue js 3 composition api, for the next update i want to emplement laravel websocket and realtime intractions
 
 
-## How up and run backend of this project
+## How to up and run backend of this project
 - after clone this project fist run composer install inside OnlineExam and then go to vue dir and run npm install 
 - to up and run this project first create database 
 - create a new env file for laravel which is the backend of this project
@@ -22,6 +22,6 @@
 - in laravel dir run php artisan serve
 - ** please serve laravel 127.0.0.1:8000 ** case axiosClient to vue expose that url as base but if you serve at some other url please change base url of axiosClient which in vue/src/axios/index.js 
 
-## How up and run front-end of this project
+## How to up and run front-end of this project
 - open terminal or cmd inside vue dir which inside OnlineExam dir and run npm run dev
 - and copy the url which is created by runing npm run dev
