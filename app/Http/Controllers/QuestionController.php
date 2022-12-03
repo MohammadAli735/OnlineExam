@@ -92,8 +92,7 @@ class QuestionController extends Controller
     public function update(UpdateQuestionRequest $request, Question $question)
     {
         $data = $request->validated();
-        resolve(QuestionServices::class)->update($data, $request);
-
+        resolve(QuestionServices::class)->update($data, $question);
         return response(['message' => 'success']);
     }
 
