@@ -18,7 +18,9 @@ class ProfileServices
             $extension = $request->file('image')->getClientOriginalExtension();
             $imageName = Str::random() . '.' . $extension;
             $data['image'] = $request->file('image')->move('upload/admin/image', $imageName);
-            unlink($user->image);
+             if($user->image!==null){
+                unlink($user->image);
+            }
         }
         $user->update($data);
     }
