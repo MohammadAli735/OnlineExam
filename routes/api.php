@@ -18,6 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::controller(Authcontroller::class)->group(function(){
     Route::post('/register','register');
     Route::post('/login','login');
+    Route::get('/is_active_exam','activeExam')->name('is.exam.active');
 });
 Route::post('/logout',[Authcontroller::class,'LogOut'])->name('logout')->middleware('auth:sanctum');
 Route::controller(StudentRequestController::class)->group(function(){
@@ -42,6 +43,6 @@ Route::post('/examReportByOfThisYear',[ReportController::class,'examReportByOfTh
     ->name('examReportByOfThisYear')->middleware('auth:sanctum');
 // profile route
 
-Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
-Route::put('/updateProfile/{user}',[ProfileController::class,'update'])->name('profile.update');
-Route::put('/changePWD/{user}',[ProfileController::class,'changePWD'])->name('profile.changePWD');
+Route::get('/profile',[ProfileController::class,'profile'])->name('profile')->middleware('auth:sanctum');;
+Route::put('/updateProfile/{user}',[ProfileController::class,'update'])->name('profile.update')->middleware('auth:sanctum');;
+Route::put('/changePWD/{user}',[ProfileController::class,'changePWD'])->name('profile.changePWD')->middleware('auth:sanctum');;
