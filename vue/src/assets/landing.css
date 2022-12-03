@@ -1,0 +1,15 @@
+.landing{
+    background-image: url('../assets/Capture.PNG');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-top: 70px !important;
+    text-align: center;
+}
+#landingSection{
+    background-color: rgba(12, 42, 52, 0.5);
+    min-height: 93vh;
+    margin-top: -20px !important;
+
+}
