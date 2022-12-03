@@ -7,7 +7,7 @@
 
 
 ## How to up and run backend of this project
-- after clone this project fist run composer install inside OnlineExam and then go to vue dir and run npm install 
+- after clone this project fist run composer install and npm install inside OnlineExam and then go to vue dir and run npm install 
 - to up and run this project first create database 
 - create a new env file for laravel which is the backend of this project
 - set the required env credentails correctly as flow 
