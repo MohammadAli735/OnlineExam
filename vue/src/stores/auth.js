@@ -9,10 +9,17 @@ export const useAuthStore = defineStore("counter", {
             credential:null,
             user: sessionStorage.getItem("user"),
             registerationError: [],
+            showForm:null
 
         };
     },
     actions: {
+        async is_active_exam(){
+            await axiosClient.get(`/is_active_exam`)
+            .then((response)=>{
+                this.showForm=response.data.message
+            })
+        },
         async login(data) {
             await axiosClient.post(`/login`, data)
                 .then((response) => {
