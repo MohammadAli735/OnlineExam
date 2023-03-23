@@ -1,7 +1,7 @@
 ## About Online Exam 
 
 -  this is a simple project which i tried to make this system an SPA system
--  I have choosen laravel as backend and vue for forent for this project
+-  I have choosen laravel as backend and vue for front-end for this project
 -  Aloguth this system is simple i tried to make the backend code more reuse-able using services class
 -  Also i have emplement all feature of vue js 3 composition api, for the next update i want to emplement laravel websocket and realtime intractions
 
@@ -10,7 +10,7 @@
 - after clone this project fist run composer install and npm install inside OnlineExam and then go to vue dir and run npm install 
 - to up and run this project first create database 
 - create a new env file for laravel which is the backend of this project
-- set the required env credentails correctly as flow 
+- set the required env credentails correctly as follows
 - ** DB_CONNECTION="mysql" **
 - ** DB_HOST=127.0.0.1 **
 - ** DB_PORT=3306 **
